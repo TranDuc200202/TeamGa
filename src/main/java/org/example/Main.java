@@ -25,5 +25,6 @@ public class Main {
         System.out.println(btnChervonUp.getText());
         btnChervonUp.click();
 
+
     }
 }
