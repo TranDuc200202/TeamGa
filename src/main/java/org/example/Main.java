@@ -106,7 +106,6 @@ public class Main {
 
         //ontop
 //        WebElement btnOnTop = driver.findElement(By.xpath("//i[@class=\"fa fa-chevron-up fa-fw fa-1x\"]"));
-//
 //        System.out.println(btnOnTop.getText());
 //        btnOnTop.click();
     }
