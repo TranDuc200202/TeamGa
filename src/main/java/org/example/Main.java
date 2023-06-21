@@ -169,19 +169,19 @@ public class Main {
         wait.until(ExpectedConditions.elementToBeClickable(LbApply));
         System.out.println(LbApply);
 
-        //Label Healthcare Program //label[@for="program"]
+        //Label Healthcare Program
         WebElement LbHealthcare = driver.findElement(By.xpath("//label[@for=\"program\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbHealthcare));
         wait.until(ExpectedConditions.elementToBeClickable(LbHealthcare));
         System.out.println(LbHealthcare);
 
-        //Label Visit Date //label[@for="visit_date"]
+        //Label Visit Date
         WebElement LbVisitDate = driver.findElement(By.xpath("//label[@for=\"visit_date\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbVisitDate));
         wait.until(ExpectedConditions.elementToBeClickable(LbVisitDate));
         System.out.println(LbVisitDate);
 
-        //Label Comment //label[@for="comment"]
+        //Label Comment
         WebElement LbComment = driver.findElement(By.xpath("//label[@for=\"comment\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbComment));
         wait.until(ExpectedConditions.elementToBeClickable(LbComment));
