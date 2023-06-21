@@ -16,7 +16,6 @@ public class Main {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         //Thread.sleep(5000); đổi thành wait không xài Thread.sleep nữa hoặc xài cho
         // các btn khác để phù hợp với ngữ cảnh
-
         // Alt + enter để gợi ý, Shift + F10 để start run
         // Chọn ID để dùng tool chạy thử
         // //a[@class=""] : để truy ra xpath
@@ -37,8 +36,9 @@ public class Main {
         wait.until(ExpectedConditions.elementToBeClickable(btnOnTop));
         System.out.println(btnOnTop.getText());
         btnOnTop.click();
+        Thread.sleep(1500);
 
-        //refresh lại trang 3 lần
+        //Connect btn FB, Twitter, Dibble
         WebElement btnFB = driver.findElement(By.xpath("//i[@class=\"fa fa-facebook fa-fw fa-3x\"]"));
         wait.until(ExpectedConditions.visibilityOf(btnFB));
         wait.until(ExpectedConditions.elementToBeClickable(btnFB));
@@ -51,20 +51,20 @@ public class Main {
         btnTwitter.click();
         Thread.sleep(2000);
 
-        WebElement btnDirbbble = driver.findElement(By.xpath("//i[@class=\"fa fa-dribbble fa-fw fa-3x\"]"));
-        wait.until(ExpectedConditions.visibilityOf(btnDirbbble));
-        wait.until(ExpectedConditions.elementToBeClickable(btnDirbbble));
-        btnDirbbble.click();
+        WebElement btnDibble = driver.findElement(By.xpath("//i[@class=\"fa fa-dribbble fa-fw fa-3x\"]"));
+        wait.until(ExpectedConditions.visibilityOf(btnDibble));
+        wait.until(ExpectedConditions.elementToBeClickable(btnDibble));
+        btnDibble.click();
         Thread.sleep(2000);
 
-        //in ra giá trị của Phone
+        //Print btnPhone
         WebElement btnPhone = driver.findElement(By.xpath("//i[@class=\"fa fa-phone fa-fw\"]"));
         wait.until(ExpectedConditions.visibilityOf(btnPhone));
         wait.until(ExpectedConditions.elementToBeClickable(btnPhone));
         System.out.println(btnPhone);
         btnPhone.click();
 
-        //cho kéo xuống để đăng nhập
+        //Scroll btnMakeApp2
         WebElement btnMakeApp2 = driver.findElement(By.xpath("//a[@id=\"btn-make-appointment\"]"));
         wait.until(ExpectedConditions.visibilityOf(btnMakeApp2));
         wait.until(ExpectedConditions.elementToBeClickable(btnMakeApp2));
@@ -82,7 +82,7 @@ public class Main {
         wait.until(ExpectedConditions.elementToBeClickable(password));
         password.sendKeys("ThisIsNotAPassword");
 
-        //Nút bấm Login
+        //btnLogin
         WebElement btnLogin = driver.findElement(By.xpath("//button[@id=\"btn-login\"]"));
         wait.until(ExpectedConditions.visibilityOf(btnLogin));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
@@ -103,7 +103,7 @@ public class Main {
         TickHongKong.click();
 
 
-        //Đóng lại Select
+        //btnSelect1
         WebElement btnSelect1 = driver.findElement(By.xpath("//select[@id='combo_facility']"));
         wait.until(ExpectedConditions.visibilityOf(btnSelect1));
         wait.until(ExpectedConditions.elementToBeClickable(btnSelect1));
@@ -135,7 +135,7 @@ public class Main {
 //        PickDate.sendKeys("21/06/2023");
 //        PickDate.click();
 
-        //input Date
+        //InputDate
         WebElement InputDate = driver.findElement(By.xpath("//input[@type=\"text\"]"));
         wait.until(ExpectedConditions.visibilityOf(InputDate));
         wait.until(ExpectedConditions.elementToBeClickable(InputDate));
@@ -143,7 +143,7 @@ public class Main {
         InputDate.click();
         Thread.sleep(3000);
 
-        // TextArea
+        //TextArea
         WebElement TextArea = driver.findElement(By.xpath("//textarea[@class=\"form-control\"]"));
         wait.until(ExpectedConditions.visibilityOf(TextArea));
         wait.until(ExpectedConditions.elementToBeClickable(TextArea));
@@ -151,41 +151,112 @@ public class Main {
         TextArea.click();
         Thread.sleep(3000);
 
-        //BtnBookAppointment //button[@type="submit"]
+        //BtnBookAppointment
         WebElement BtnBookAppointment = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
         wait.until(ExpectedConditions.visibilityOf(BtnBookAppointment));
         wait.until(ExpectedConditions.elementToBeClickable(BtnBookAppointment));
         BtnBookAppointment.click();
 
-        //Label Facility
+        //LbFacility
         WebElement LbFacility = driver.findElement(By.xpath("//label[@for=\"facility\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbFacility));
         wait.until(ExpectedConditions.elementToBeClickable(LbFacility));
         System.out.println(LbFacility);
 
-        //Label Apply for hospital readmission
+        //LbApply
         WebElement LbApply = driver.findElement(By.xpath("//label[@for=\"hospital_readmission\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbApply));
         wait.until(ExpectedConditions.elementToBeClickable(LbApply));
         System.out.println(LbApply);
 
-        //Label Healthcare Program
+        //LbHealthcare
         WebElement LbHealthcare = driver.findElement(By.xpath("//label[@for=\"program\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbHealthcare));
         wait.until(ExpectedConditions.elementToBeClickable(LbHealthcare));
         System.out.println(LbHealthcare);
 
-        //Label Visit Date
+        //LbVisitDate
         WebElement LbVisitDate = driver.findElement(By.xpath("//label[@for=\"visit_date\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbVisitDate));
         wait.until(ExpectedConditions.elementToBeClickable(LbVisitDate));
         System.out.println(LbVisitDate);
 
-        //Label Comment
+        //LbComment
         WebElement LbComment = driver.findElement(By.xpath("//label[@for=\"comment\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbComment));
         wait.until(ExpectedConditions.elementToBeClickable(LbComment));
         System.out.println(LbComment);
+
+        //btnMenuAppointment
+        WebElement btnMenuAppointment = driver.findElement(By.xpath("//i[@class=\"fa fa-bars\"]"));
+        wait.until(ExpectedConditions.visibilityOf(btnMenuAppointment));
+        wait.until(ExpectedConditions.elementToBeClickable(btnMenuAppointment));
+        btnMenuAppointment.click();
+        Thread.sleep(2000);
+
+        //btnHistory
+        WebElement btnHistory = driver.findElement(By.xpath("//a[text()='History']"));
+        wait.until(ExpectedConditions.visibilityOf(btnHistory));
+        wait.until(ExpectedConditions.elementToBeClickable(btnHistory));
+        btnHistory.click();
+        Thread.sleep(2000);
+
+        //LbHeading
+        WebElement LbHeading = driver.findElement(By.xpath("//div[@class=\"panel-heading\"]"));
+        wait.until(ExpectedConditions.visibilityOf(LbHeading));
+        wait.until(ExpectedConditions.elementToBeClickable(LbHeading));
+        System.out.println(LbHeading);
+
+        //LbClearfix1
+        WebElement LbClearfix1 = driver.findElement(By.xpath("//div[@class=\"clearfix\"]"));
+        wait.until(ExpectedConditions.visibilityOf(LbClearfix1));
+        wait.until(ExpectedConditions.elementToBeClickable(LbClearfix1));
+        System.out.println(LbClearfix1);
+
+        //LbClearfix2
+        WebElement LbClearfix2 = driver.findElement(By.xpath("//div[@class=\"clearfix\"]"));
+        wait.until(ExpectedConditions.visibilityOf(LbClearfix2));
+        wait.until(ExpectedConditions.elementToBeClickable(LbClearfix2));
+        System.out.println(LbClearfix2);
+
+        //LbClearfix3
+        WebElement LbClearfix3 = driver.findElement(By.xpath("//div[@class=\"clearfix\"]"));
+        wait.until(ExpectedConditions.visibilityOf(LbClearfix3));
+        wait.until(ExpectedConditions.elementToBeClickable(LbClearfix3));
+        System.out.println(LbClearfix3);
+
+        //In btnComment
+        WebElement btnComment = driver.findElement(By.xpath("//label[@for=\"comment\"]"));
+        wait.until(ExpectedConditions.visibilityOf(btnComment));
+        wait.until(ExpectedConditions.elementToBeClickable(btnComment));
+        System.out.println(btnComment);
+
+        //Print content in Comment
+        WebElement ContentComment = driver.findElement(By.xpath("//p[@id=\"comment\"]"));
+        wait.until(ExpectedConditions.visibilityOf(ContentComment));
+        wait.until(ExpectedConditions.elementToBeClickable(ContentComment));
+        System.out.println(ContentComment);
+
+        //btnMenuProfile
+        WebElement btnMenuProfile = driver.findElement(By.xpath("//i[@class=\"fa fa-bars\"]"));
+        wait.until(ExpectedConditions.visibilityOf(btnMenuProfile));
+        wait.until(ExpectedConditions.elementToBeClickable(btnMenuProfile));
+        btnMenuProfile.click();
+        Thread.sleep(2000);
+
+        //btnProfile
+        WebElement btnProfile = driver.findElement(By.xpath("//a[text()=\"Profile\"]"));
+        wait.until(ExpectedConditions.visibilityOf(btnProfile));
+        wait.until(ExpectedConditions.elementToBeClickable(btnProfile));
+        btnProfile.click();
+        Thread.sleep(2000);
+
+        //btnLogout
+        WebElement btnLogout = driver.findElement(By.xpath("//a[@class=\"btn btn-default\"]"));
+        wait.until(ExpectedConditions.visibilityOf(btnLogout));
+        wait.until(ExpectedConditions.elementToBeClickable(btnLogout));
+        btnLogout.click();
+        Thread.sleep(2000);
 
         driver.quit();
 
