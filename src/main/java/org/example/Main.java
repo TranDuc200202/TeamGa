@@ -46,8 +46,7 @@ public class Main {
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
         btnLogin.click();
 
-        //Click checkbox apply for HPT RM
-        driver.findElement(By.xpath("//input[@id='chk_hospotal_readmission']")).click();
+
 
 
         //bnt Make App
@@ -55,19 +54,60 @@ public class Main {
         System.out.println(btnMakeApp.getText());
         btnMakeApp.click();
 
+        //Click checkbox apply for HPT RM
+        driver.findElement(By.xpath("//input[@id='chk_hospotal_readmission']")).click();
+
+        //Facility
+        WebElement Select = driver.findElement(By.xpath("//select[@id='combo_facility']"));
+        wait.until(ExpectedConditions.visibilityOf(Select));
+        wait.until(ExpectedConditions.elementToBeClickable(Select));
+        Select.click();
+
+        //Select HongKong
+        WebElement SlHongKong = driver.findElement(By.xpath("//option[@value='Hongkong CURA Healthcare Center']"));
+        wait.until(ExpectedConditions.visibilityOf(SlHongKong));
+        wait.until(ExpectedConditions.elementToBeClickable(SlHongKong));
+        SlHongKong.click();
+
+        //Click checkbox medicares
+        driver.findElement(By.xpath("//input[@value='Medicare']")).click();
+
+        //Date/moth/year
+        WebElement VisitDate = driver.findElement((By.xpath("//input[@id='txt_visit_date']")));
+        VisitDate.sendKeys("27/06/2023");
+        System.out.println(VisitDate.getText());
+
+        //Comment
+        WebElement AcComment = driver.findElement((By.xpath(" //textarea[@id = 'txt_comment']")));
+        wait.until(ExpectedConditions.visibilityOf(AcComment));
+        wait.until(ExpectedConditions.elementToBeClickable(AcComment));
+        AcComment.sendKeys("111");
+        System.out.println(AcComment.getText());
+
+        //
+        WebElement Submit = driver.findElement(By.xpath("//button[@id='btn-book-appointment']"));
+        wait.until(ExpectedConditions.visibilityOf(Submit));
+        wait.until(ExpectedConditions.elementToBeClickable(Submit));
+        Submit.click();
+
+        //Menu
+        WebElement Menu = driver.findElement(By.xpath("//i[@class=\"fa fa-bars\"]"));
+        wait.until(ExpectedConditions.visibilityOf(Menu));
+        wait.until(ExpectedConditions.elementToBeClickable(Menu));
+        Menu.click();
+
+        //History
+        WebElement History = driver.findElement(By.xpath("//a[text()='History']"));
+        wait.until(ExpectedConditions.visibilityOf(History));
+        wait.until(ExpectedConditions.elementToBeClickable(History));
+        History.click();
 
 
 
+        //ontop
 //        WebElement btnOnTop = driver.findElement(By.xpath("//i[@class=\"fa fa-chevron-up fa-fw fa-1x\"]"));
 //
 //        System.out.println(btnOnTop.getText());
 //        btnOnTop.click();
-
-
-
-
-
-
-
     }
 }
