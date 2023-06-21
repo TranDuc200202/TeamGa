@@ -95,17 +95,23 @@ public class Main {
         Menu4.click();
         Thread.sleep(2000);
 
-        //Get the WebElement Logout
-        WebElement btnLogout = driver.findElement(By.xpath("//a[text()='Logout']"));
+        // Get the WebElement Logout Profile
+        WebElement btnLogout = driver.findElement(By.xpath("//a[@class=\"btn btn-default\"]"));
         wait.until(ExpectedConditions.visibilityOf(btnLogout));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogout));
         btnLogout.click();
 
-        WebElement Menu5 = driver.findElement(By.xpath("//a[@id='menu-toggle']"));
-        wait.until(ExpectedConditions.visibilityOf(Menu5));
-        wait.until(ExpectedConditions.elementToBeClickable(Menu5));
-        Menu5.click();
-        Thread.sleep(2000);
+//        //Get the WebElement Logout
+//        WebElement btnLogout = driver.findElement(By.xpath("//a[text()='Logout']"));
+//        wait.until(ExpectedConditions.visibilityOf(btnLogout));
+//        wait.until(ExpectedConditions.elementToBeClickable(btnLogout));
+//        btnLogout.click();
+//
+//        WebElement Menu5 = driver.findElement(By.xpath("//a[@id='menu-toggle']"));
+//        wait.until(ExpectedConditions.visibilityOf(Menu5));
+//        wait.until(ExpectedConditions.elementToBeClickable(Menu5));
+//        Menu5.click();
+//        Thread.sleep(2000);
 
 
     }
