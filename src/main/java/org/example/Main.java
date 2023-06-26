@@ -161,31 +161,31 @@ public class Main {
         WebElement LbFacility = driver.findElement(By.xpath("//label[@for=\"facility\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbFacility));
         wait.until(ExpectedConditions.elementToBeClickable(LbFacility));
-        System.out.println(LbFacility);
+        System.out.println(LbFacility.getText());
 
         //LbApply
         WebElement LbApply = driver.findElement(By.xpath("//label[@for=\"hospital_readmission\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbApply));
         wait.until(ExpectedConditions.elementToBeClickable(LbApply));
-        System.out.println(LbApply);
+        System.out.println(LbApply.getText());
 
         //LbHealthcare
         WebElement LbHealthcare = driver.findElement(By.xpath("//label[@for=\"program\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbHealthcare));
         wait.until(ExpectedConditions.elementToBeClickable(LbHealthcare));
-        System.out.println(LbHealthcare);
+        System.out.println(LbHealthcare.getText());
 
         //LbVisitDate
         WebElement LbVisitDate = driver.findElement(By.xpath("//label[@for=\"visit_date\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbVisitDate));
         wait.until(ExpectedConditions.elementToBeClickable(LbVisitDate));
-        System.out.println(LbVisitDate);
+        System.out.println(LbVisitDate.getText());
 
         //LbComment
         WebElement LbComment = driver.findElement(By.xpath("//label[@for=\"comment\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbComment));
         wait.until(ExpectedConditions.elementToBeClickable(LbComment));
-        System.out.println(LbComment);
+        System.out.println(LbComment.getText());
 
         //btnMenuAppointment
         WebElement btnMenuAppointment = driver.findElement(By.xpath("//i[@class=\"fa fa-bars\"]"));
@@ -205,37 +205,37 @@ public class Main {
         WebElement LbHeading = driver.findElement(By.xpath("//div[@class=\"panel-heading\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbHeading));
         wait.until(ExpectedConditions.elementToBeClickable(LbHeading));
-        System.out.println(LbHeading);
+        System.out.println(LbHeading.getText());
 
         //LbClearfix1
         WebElement LbClearfix1 = driver.findElement(By.xpath("//div[@class=\"clearfix\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbClearfix1));
         wait.until(ExpectedConditions.elementToBeClickable(LbClearfix1));
-        System.out.println(LbClearfix1);
+        System.out.println(LbClearfix1.getText());
 
         //LbClearfix2
         WebElement LbClearfix2 = driver.findElement(By.xpath("//div[@class=\"clearfix\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbClearfix2));
         wait.until(ExpectedConditions.elementToBeClickable(LbClearfix2));
-        System.out.println(LbClearfix2);
+        System.out.println(LbClearfix2.getText());
 
         //LbClearfix3
         WebElement LbClearfix3 = driver.findElement(By.xpath("//div[@class=\"clearfix\"]"));
         wait.until(ExpectedConditions.visibilityOf(LbClearfix3));
         wait.until(ExpectedConditions.elementToBeClickable(LbClearfix3));
-        System.out.println(LbClearfix3);
+        System.out.println(LbClearfix3.getText());
 
         //In btnComment
         WebElement btnComment = driver.findElement(By.xpath("//label[@for=\"comment\"]"));
         wait.until(ExpectedConditions.visibilityOf(btnComment));
         wait.until(ExpectedConditions.elementToBeClickable(btnComment));
-        System.out.println(btnComment);
+        System.out.println(btnComment.getText());
 
         //Print content in Comment
         WebElement ContentComment = driver.findElement(By.xpath("//p[@id=\"comment\"]"));
         wait.until(ExpectedConditions.visibilityOf(ContentComment));
         wait.until(ExpectedConditions.elementToBeClickable(ContentComment));
-        System.out.println(ContentComment);
+        System.out.println(ContentComment.getText());
 
         //btnMenuProfile
         WebElement btnMenuProfile = driver.findElement(By.xpath("//i[@class=\"fa fa-bars\"]"));
