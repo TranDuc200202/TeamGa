@@ -20,24 +20,34 @@ public class CommonPageObject {
     public WebElement password;
     @FindBy(how = How.XPATH, using = "//button[@id='btn-login']")
     public WebElement login;
+    @FindBy(how = How.XPATH, using = "//select[@id='combo_facility']")
+    public WebElement select;
     @FindBy(how = How.XPATH, using = "//a[@id='menu-toggle']")
     public WebElement menu;
     @FindBy(how = How.XPATH, using = "//a[text()='Home']")
     public WebElement btnHome;
+    @FindBy(how = How.XPATH, using = "//a[@id=\"btn-make-appointment\"]")
+    public WebElement btnmakeAppointment;
     @FindBy(how = How.XPATH, using = "//a[@id='menu-toggle']")
     public WebElement menu2;
     @FindBy(how = How.XPATH, using = "//a[text()='History']")
     public WebElement History;
+    @FindBy(how = How.XPATH, using = "//a[@class=\"btn btn-default\"]")
+    public WebElement btnGotoHomepage;
     @FindBy(how = How.XPATH, using = "//a[@id='menu-toggle']")
     public WebElement menu3;
     @FindBy(how = How.XPATH, using = "//a[text()='Profile']")
     public WebElement Profile;
+    @FindBy(how = How.XPATH, using = "//a[@class=\"btn btn-default\"]")
+    public WebElement BtnLogout;
     @FindBy(how = How.XPATH, using = "//a[@id='menu-toggle']")
     public WebElement menu4;
     @FindBy(how = How.XPATH, using = "//a[text()='Logout']")
     public WebElement Logout;
     @FindBy(how = How.XPATH, using = "//a[@class=\"btn btn-default\"]")
-    public WebElement BtnLogout;
+    public WebElement BtnLogout2;
+    @FindBy(how = How.XPATH, using = "//a[@id=\"btn-make-appointment\"]")
+    public WebElement btnmakeAppointment2;
 
     @FindBy(xpath = "//*[@id=\"appointment\"]/div/div/div/h2")
     public WebElement makeAppointment;

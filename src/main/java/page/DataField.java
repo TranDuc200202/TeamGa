@@ -1,5 +1,6 @@
 package page;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -20,6 +21,7 @@ public class DataField {
             s = new File(excelfilePath);
             stream = new FileInputStream(s);
             work_book = new XSSFWorkbook(stream);
+            sheet = work_book.getSheetAt(0);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -29,6 +31,7 @@ public class DataField {
         sheet = work_book.getSheetAt(0);
         return sheet.getRow(row).getCell(column).getStringCellValue();
     }
+
 
     public int getRowCount(int sheetIndex) {
         int row = work_book.getSheetAt(sheetIndex).getLastRowNum();
@@ -41,11 +44,25 @@ public class DataField {
     }
 
     public void write(String text, int row, int column) throws IOException {
-        var cell = sheet.getRow(row).createCell(column);
-        System.out.println(cell);
-        cell.setCellValue(text);
-        FileOutputStream output = new FileOutputStream(filePath);
-        work_book.write(output);
-        output.close();
+        work_book = new XSSFWorkbook( new FileInputStream(s));
+        sheet = work_book.getSheetAt(0);
+        try {
+            XSSFRow row1 = sheet.getRow(row);
+            var cell = row1.createCell(column);
+            System.out.println(cell);
+            cell.setCellValue(text);
+            FileOutputStream output = new FileOutputStream(filePath);
+            work_book.write(output);
+            output.close();
+        }catch (Exception e){
+            XSSFRow row1 = sheet.createRow(row);
+            var cell = row1.createCell(column);
+            System.out.println(cell);
+            cell.setCellValue(text);
+            FileOutputStream output = new FileOutputStream(filePath);
+            work_book.write(output);
+            output.close();
+        }
+
     }
 }
