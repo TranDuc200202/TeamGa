@@ -68,10 +68,10 @@ public class testClass extends CommonPageObject {
         dataField.write("Home",1,1);
         System.out.println(btnHome.getText());
 
-        btnmakeAppointment.click();
+        btnmakeAppointment2.click();
         Thread.sleep(1000);
         dataField.write("Make Appointment",1,2);
-        System.out.println(btnmakeAppointment.getText());
+        System.out.println(btnmakeAppointment2.getText());
 
         menu2.click();
         Thread.sleep(1000);

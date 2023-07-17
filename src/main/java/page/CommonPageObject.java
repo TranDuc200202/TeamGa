@@ -26,8 +26,6 @@ public class CommonPageObject {
     public WebElement menu;
     @FindBy(how = How.XPATH, using = "//a[text()='Home']")
     public WebElement btnHome;
-    @FindBy(how = How.XPATH, using = "//a[@id=\"btn-make-appointment\"]")
-    public WebElement btnmakeAppointment;
     @FindBy(how = How.XPATH, using = "//a[@id='menu-toggle']")
     public WebElement menu2;
     @FindBy(how = How.XPATH, using = "//a[text()='History']")
@@ -38,8 +36,6 @@ public class CommonPageObject {
     public WebElement menu3;
     @FindBy(how = How.XPATH, using = "//a[text()='Profile']")
     public WebElement Profile;
-    @FindBy(how = How.XPATH, using = "//a[@class=\"btn btn-default\"]")
-    public WebElement BtnLogout;
     @FindBy(how = How.XPATH, using = "//a[@id='menu-toggle']")
     public WebElement menu4;
     @FindBy(how = How.XPATH, using = "//a[text()='Logout']")
